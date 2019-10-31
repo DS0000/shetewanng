@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>联系我们</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/cxbsnet.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- <script src="js/new_file.js" type="text/javascript"></script> -->
+	<body>
+		<div id="app">
+			<div class="headerpage"></div>
+			<div class="cx-fex-c fex-items-c layout" style=" width: 100%;">
+				<img class="img-responsive" src="img/title-imgs.jpg" style="height: 600px;width: 100%;" alt="">
+			</div>
+			<div class="layout cx-fex-c">			
+				<div class="xs10 cx-fex-c pad-a20">
+					<div class="xs2 pad-a10 cx-click user-hover" @click="show_t(i)" v-for="(item,i) in lists">
+						<div v-cloak class="layout pad-a5 bor-gray bor-rb t-c t-18">
+							{{item.title}}
+						</div>
+					</div>					
+				</div>			
+			</div>
+			<!-- 联系我们 -->
+			<div class="cont cx-fex pad-b50" v-show="tel_us">
+				<div class="xs6 cx-fex-l fex-items-c">
+					<div class="layout cx-fex-c fex-items-c">
+						<img class="img-responsive" src="img/user01.png" >
+					</div>
+				</div>
+				<div class="xs6 cx-fex-l fex-items-c pos-r" style="top:25px">
+					<div class="layout" id="box">
+					    <div class="inner">
+					        <!--轮播图-->
+					        <ul>
+					            <li><a class="cx-fex-c fex-items-c" href="news.html"><img src="img/title-img05.jpg" style="height: 250px;" alt=""></a></li>
+								<li><a class="cx-fex-c fex-items-c" href="news.html"><img src="img/title-img08.png" style="height: 250px;" alt=""></a></li>
+					            <li><a class="cx-fex-c fex-items-c" href="news.html"><img src="img/title-img06.png" style="height: 250px;" alt=""></a></li>
+					            <li><a class="cx-fex-c fex-items-c" href="news.html"><img src="img/title-img07.png" style="height: 250px;" alt=""></a></li>
+								<li><a class="cx-fex-c fex-items-c" href="news.html"><img src="img/title-img06.png" style="height: 250px;" alt=""></a></li>
+								<li><a class="cx-fex-c fex-items-c" href="news.html"><img src="img/title-img07.png" style="height: 250px;" alt=""></a></li>
+							</ul>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- 在线留言 -->
+			<div class="cont cx-fex-c" v-show="line_note">
+				<div class="xs8 mt-20 mb-20">
+					<el-input type="text" v-model="test"  placeholder="您的姓名"></el-input>
+				</div>
+				<div class="xs8  mt-20 mb-20">
+					<el-input type="text" v-model="test1" placeholder="您的手机号"></el-input>
+				</div>
+				<div class="xs8 cx-fex-c mt-20 pad-b50">
+					<div class="xs9 cx-fex-c">
+						<el-input type="textarea" v-model="test2" placeholder="有什么要求告诉我们"></el-input>
+					</div>
+					<div class="xs3 cx-fex-c">
+						<el-button type="primary" >立即提交</el-button>
+					</div>				
+				</div>
+
+			</div>
+			<div class="cont cx-fex" v-show="come">
+				
+				<div class="cx-fex-l xs6 pad-a50">
+					<h3 class="cx-fex-c t-34">招聘信息</h3>
+				</div>
+				<div class="cx-fex-c fex-items-c xs6 pad-a50">
+					<img class="img-responsive" src="img/zhaopin01.jpg" alt="">
+				</div>
+			</div>
+			<div class="footerpage"></div>
+		</div>
+		
+	<script src="js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script type="text/javascript">			
+			$(function(){
+				/*公共部分
+				 * 导航栏
+				 * footer CopyRight
+				 */
+				$(".headerpage").load("header.html");
+				 $(".footerpage").load("footer.html");
+			});			
+	</script>
+	<script>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				lists:[{title:'联系我们',list:''},
+				{title:'在线留言',list:''},
+				{title:'招贤纳士',list:''}],
+				tel_us:true,
+				line_note:false,
+				come:false,
+				form: {
+				          name: '',
+				          region: '',
+				          date1: '',
+				          date2: '',
+				          delivery: false,
+				          type: [],
+				          resource: '',
+				          desc: ''
+				        },
+				test:'',
+				test1:'',
+				test2:''
+			},
+			methods:{
+				show_t(i){
+					console.log(i)
+					if(i==0){
+						this.tel_us = true;
+						this.line_note = false;
+						this.come = false;
+					}
+					if(i==1){
+						this.tel_us = false;
+						this.line_note = true;
+						this.come = false;
+					}
+					if(i==2){
+						this.tel_us = false;
+						this.line_note = false;
+						this.come = true;
+					}
+				}
+			},
+		
+		})
+		function my$(id) {
+		    return document.getElementById(id);
+		}			 
+		//获取各元素，方便操作
+		var inner=box.children[0];
+		var ulObj=inner.children[0];
+		var list=ulObj.children;	
+		var imgWidth=inner.offsetWidth;
+		var pic=0;			
+		ulObj.appendChild(ulObj.children[0].cloneNode(true));			 
+		var timeId=setInterval(onmouseclickHandle,2000);	
+		function onmouseclickHandle() {
+		    //如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,
+		    //所以,如果用户再次点击按钮,用户应该看到第二个图片
+		    if (pic == list.length - 1) {
+		        //如何从第6个图,跳转到第一个图
+		        pic = 0;//先设置pic=0
+		        ulObj.style.left = 0 + "px";//把ul的位置还原成开始的默认位置
+		    }
+		    pic++;//立刻设置pic加1,那么此时用户就会看到第二个图片了
+		    animate(ulObj, -pic * imgWidth);
+		}
+		//设置任意的一个元素,移动到指定的目标位置
+		function animate(element, target) {
+		    clearInterval(element.timeId);
+		    //定时器的id值存储到对象的一个属性中
+		    element.timeId = setInterval(function () {
+		        //获取元素的当前的位置,数字类型
+		        var current = element.offsetLeft;
+		        //每次移动的距离
+		        var step = 10;
+		        step = current < target ? step : -step;
+		        //当前移动到位置
+		        current += step;
+		        if (Math.abs(current - target) > Math.abs(step)) {
+		            element.style.left = current + "px";
+		        } else {
+		            //清理定时器
+		            clearInterval(element.timeId);
+		            //直接到达目标
+		            element.style.left = target + "px";
+		        }
+		    }, 10);
+		}
+	</script>
+	</body>
+</html>

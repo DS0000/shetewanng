@@ -1,0 +1,173 @@
+	[v-cloak]{
+		display: none;
+	}
+	.bg-img {
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-bottom: 8%;
+			padding-top: 35%;
+			background-size: 110%;
+		}
+	.bg-imgs {
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-bottom: 50%;
+			padding-top: 50%;
+			background-size:100%;
+		}
+
+	.ul-li .divs .divs:hover {
+			background-color: #63b8ff
+		}
+	.ul-li .divs .divs:hover a{
+			/* background-color: #63b8ff; */
+			color: #fff;
+		}
+	.user-hover div:hover{
+		background-color: #0099FF;
+		color: #fff;
+		border: 1px solid #0099FF;
+	}
+	.bor-ff99{
+		border: 1px solid #0099FF;
+	}
+	.ul-li .as:hover{
+		background-color: #63b8ff
+	}
+
+	.t-34 {
+			font-size: 34px;
+		}
+	.t-24{
+		font-size: 24px;
+	}
+	.t-99ff{
+		color: #0099FF;
+	}
+	.bg-99ff{
+		background-color: #0099FF;
+	}
+
+	a {
+			color: black;
+		}
+	.bor-bton {
+		border-bottom: 1px solid #0099FF;
+	   }
+	.bor-f2{
+		border: 1px solid #F2F2F2;
+	}
+	   /*新闻中心的轮播*/
+	   .inner{
+	       width: 500px;
+	       height: 300px;
+	       position: relative;
+	       overflow: hidden;
+	   }
+	   .inner img{
+	       width: 500px;
+	       height: 300px;
+	       vertical-align: top
+	   }
+	   ul {
+	       width: 1000%;
+	       position: absolute;
+	       list-style: none;
+	       left:0;
+	       top: 0;
+	   }
+	   .inner li{
+	       float: left;
+	   	 
+	   }
+	   .bg-f2{
+		   background-color: #F2F2F2;
+	   }
+	   .bor-xx{
+		   border-bottom:1px dashed #111
+	   }
+	   .bor-xxs{
+	   		   border-bottom:1px dashed #F1F2F3
+	   }
+	   .footers{
+		  position: relative;
+		   bottom: 0;
+		   z-index: 2;
+	   }
+	  .img-responsives {
+	      max-width: 200px;
+	      width: auto;
+	      max-height: 100%;
+	      height: auto;
+	  }
+	 /*  .headers {
+	 
+	   	position: fixed;
+	   	top: 0;
+	  
+	   	background-color: #FFFFFF;
+	   	z-index: 99999;
+	   } */
+	/*news*/
+	.bor-rad{
+	border-radius: 50px;
+	}
+	.notice {		          
+		border: 1px solid #ddd;
+		/* 盒子的总宽度w=298+1+1=300px */			  
+		overflow: hidden;
+		/* 点击导航栏第一个或最后一个标签时，超出的部分隐藏*/
+		margin: 10px;
+		   }		        
+   .notice-tit {
+	   position: relative;
+	  height: 40px;
+   }		        
+   .notice-tit ul {
+	   position: absolute;
+	 /*  width: 301px; */
+	   left: -1px;
+	   /* 当点击第一个导航栏标签时，左边边框会与大盒子的边框发生叠加，解决的方法利用定位让两个边框重合叠加在一起 */
+	/*   height: 27px; */
+	   background: #f7f7f7;
+	   border-bottom: 1px solid #ddd;
+   }		        
+   .notice-tit ul li {        
+	   line-height: 20px;
+	height: 40px;
+   }		        
+   .notice-tit ul li.selected {
+	  border-left: 1px solid #ddd;
+	   border-right: 1px solid #ddd;
+	   background-color: #0099FF;
+	color: #fff;
+	   /* padding: 0; */
+	  /* border-bottom: 1px solid #fff; */
+   }		        
+   .notice-con div {
+	  height: 900px;
+	/*   padding: 20px; */
+	   display: none;
+   }
+   .news-pos-r{
+	   position: relative;
+	   top: -600px;
+	   left: 300px;
+   }
+   .fangda div{
+   	transition: all 0.6s;
+   }
+   .fangda div:hover{
+   				transform: scale(1.1);
+   			}
+			/*header部分*/
+.hover_top:hover .hover_this{
+				display: block !important;
+			}
+.hover_second:hover{
+	background-color: #F5F5F5;
+	color: black;
+}
+.hover-a:hover a{
+		color: #fff;
+	}

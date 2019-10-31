@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!-- 行驶证 驾驶证的制作  汽车牌照防盗螺丝   马路上的标识  三角架   -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关于产品</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/cxbsnet.css" />
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/new_file.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+	<body>
+		<div id="app">
+			<div class="headerpage"></div>
+			<div class="layout cx-fex-c fex-items-c">
+				<img style="width: 100%;height: 400px;" src="img/dt-img01.jpg" alt="">
+			</div>
+			<!-- 3个按钮 -->
+			<div class="layout cx-fex-c">
+				<div class="xs10 cx-fex-c pad-a20">
+					<div class="xs2 pad-a10 cx-click user-hover" @click="show_t(i)" v-for="(item,i) in lists">
+						<div v-cloak class="layout pad-a5 bor-gray bor-rb t-c t-18 user_click">
+							{{item.title}}
+						</div>
+					</div>					
+				</div>			
+			</div>
+			
+			<!-- 全部产品 -->
+			<div class="cont cx-fex-c pad-b50" v-show="about_us">
+				<div class="layout cx-fex-l">
+					<div class="layout cx-fex-l pad-a20">
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda">
+							<div class="layout bg-imgs" style="background-image: url(img/cp-11.jpg);">
+								<!-- <img class="img-responsive" src="img/cp-01.jpg" alt=""> -->
+							</div>
+							<h3 class="t-18 cx-fex-c pad-t10">行驶证制作</h3>
+						</div>
+			
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-10.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-02.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">驾驶证制作</h3>
+					</div>
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-12.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-03.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">汽车牌照防盗螺丝</h3>
+					</div>
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-13.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-04.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">马路上的标识</h3>
+					</div>
+					<div class="xs3 pad-a10 pad-t40 mt-40 cx-fex-c cx-click fangda">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-14.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-04.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">三角架</h3>
+					</div>
+					</div>			
+				</div>
+			</div>
+			
+			<!-- 行驶证制作 -->
+			<div class="cont pad-b50" v-show="line_note">
+				<div class="layout cx-fex-l pad-a20">
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda" v-if="loginType === 'username'" @click="changeloginType">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-11.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-01.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">行驶证制作</h3>
+					</div>	
+					<!-- 点击图片详情 -->
+					<div class="layout cx-fex-c pad-t50" v-if="loginType === 'name'" @click="changelogin">
+						<div class="xs4 mb-10 t-24 bor-gray t-c pad-a5">行驶证制作</div>
+						<div class="layout cx-fex-l">
+							<div class="xs8 cx-fex-l pad-a10">
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">应用环境：</h3>
+								<div class="t-gray t-18">交通公路上行驶 </div>
+							</div>
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">作用：</h3>
+								<span class="t-gray t-18">1.车辆上牌凭证。 </span>
+								<span class="t-gray t-18">2.产权权属证明。 </span>
+								<span class="t-gray t-18">3.保险索赔凭证。 </span>
+								<span class="t-gray t-18">4.新车保修凭证。 </span>
+							</div>									
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">基本功能：</h3>
+								<span class="t-gray t-18">
+									机动车经公安机关交通管理部门登记后，方可上道路行驶。
+									《机动车行驶证》还有一个特殊的功能，就是能够确定新车“保修期”的起始日期。
+									办理了保险的机动车辆，如果发生了保险责任范围内的交通事故，投保人只有持《机动车行驶证》，而且是有效的行驶证（即按时参加了年度检验），保险公司才有可能理赔。如果不能出示有效行驶证，即使在保险有效期之内，保险公司也将拒绝赔偿。
+								</span>
+							</div>																
+						</div>									
+							<div class="xs4 cx-fex-l">
+								<div class="layout cx-fex-c fex-items-c">
+									<img class="img-responsive" src="img/cp-11.jpg" alt="">
+								</div>
+							</div>
+						</div>								
+					</div>						
+				</div>
+											
+			</div>
+			
+			<!-- 驾驶证制作 -->
+			<div class="cont pad-b50" v-show="come">
+				<div class="layout cx-fex-l pad-a20">
+						<div class="xs3 pad-a10 cx-fex-c cx-click fangda" v-if="loginType === 'username'" @click="changeloginType">
+							<div class="layout bg-imgs" style="background-image: url(img/cp-10.jpg);">
+								<!-- <img class="img-responsive" src="img/cp-01.jpg" alt=""> -->
+							</div>
+							<h3 class="t-18 cx-fex-c pad-t10">驾驶证制作</h3>							
+						</div>							
+					<!-- 点击图片详情 -->
+						<div class="layout cx-fex-c" v-if="loginType === 'name'" @click="changelogin">
+							<div class="xs2 t-24 bor-gray t-c pad-a5">驾驶证制作</div>
+							<div class="layout cx-fex-l">
+								<div class="xs8 cx-fex-l pad-a10">
+								<div class="layout cx-fex-l pad-t20">
+									<h3 class="t-18">应用环境：</h3>
+									<div class="t-gray t-18">有了这个证才能开车上路 </div>
+								</div>
+								<div class="layout cx-fex-l pad-t20">
+									<h3 class="t-18">作用：</h3>
+									<span class="t-gray t-18">1.去医院挂号忘记带身份证了，不要着急，如果你是随身携带驾驶证的人，那么就要恭喜你可以成功挂号了，不过比正常的挂号程序要稍微繁琐一点。。 </span>
+									<span class="t-gray t-18">2.如果开车出外游玩忘记了带身份证不要着急，驾驶证是可以提供给宾馆当有效证件办理入住的，不会让你因为忘带身份证而睡大街的。 </span>
+									<span class="t-gray t-18">3.如果临时需要乘坐火车去外地，这时却发现没有带身份证，这可怎么办？别着急，看看自己有没有驾驶证随身携带的习惯，如果你带了驾驶证，那么就可以凭借驾驶证购买火车票了。</span>
+								</div>									
+								<div class="layout cx-fex-l pad-t20">
+									<h3 class="t-18">需求：</h3>
+									<span class="t-gray t-18">
+										在现代生活中，汽车是一种十分普遍的出行方式。想要开车上路 就要先考取驾驶证，如果遇到交警排查驾驶证的话，您的车将会被扣下 和缴纳相应的罚款
+									</span>
+								</div>									
+							</div>									
+								<div class="xs4 cx-fex-l">
+									<div class="layout cx-fex-c fex-items-c">
+										<img class="img-responsive" src="img/cp-10.jpg" alt="">
+									</div>
+								</div>
+							</div>								
+						</div>					
+				</div>								
+			</div>
+			<!--汽车牌照防盗螺丝  -->
+			<div class="cont pad-b50" v-show="come01">
+				<div class="layout cx-fex-l pad-a20">
+						<div class="xs3 pad-a10 cx-fex-c cx-click fangda" v-if="loginType === 'username'" @click="changeloginType">
+							<div class="layout bg-imgs" style="background-image: url(img/cp-12.jpg);">
+								<!-- <img class="img-responsive" src="img/cp-01.jpg" alt=""> -->
+							</div>
+							<h3 class="t-18 cx-fex-c pad-t10">汽车牌照防盗螺丝</h3>							
+						</div>							
+					<!-- 点击图片详情 -->
+						<div class="layout cx-fex-c" v-if="loginType === 'name'" @click="changelogin">
+							<div class="xs2 t-24 bor-gray t-c pad-a5">防盗螺丝</div>
+							<div class="layout cx-fex-l">
+								<div class="xs8 cx-fex-l pad-a10">
+								<div class="layout cx-fex-l pad-t20">
+									<h3 class="t-18">应用环境：</h3>
+									<div class="t-gray t-18">汽车机身上的小零件 </div>
+								</div>
+								<div class="layout cx-fex-l pad-t20">
+									<h3 class="t-18">作用：</h3>
+									<span class="t-gray t-18">1.是一种为了防止长期置于户外公共环境下的固定设施被盗的紧固件。</span>
+								</div>									
+								<div class="layout cx-fex-l pad-t20">
+									<h3 class="t-18">防盗螺丝基本形式：</h3>
+									<span class="t-gray t-18">
+										一般按照结构和种类被分为可装可卸式和可装不可卸式两种，前者又分为内五角防盗螺丝，内梅花防盗螺丝，Y型防盗螺丝，外三角防盗螺丝，内三角防盗螺丝，两点防盗螺丝，偏心孔防盗螺丝，内多齿形等多种结构。
+										某些汽车轮毂上用的就是可装可卸式防盗螺丝的一种，我们常见的车用防盗螺丝通常是内梅花结构的，通过对梅花齿形的微调来起到防盗的作用，一般每组防盗螺丝只为用户配备一把解锁钥匙。
+										而汽车牌照上所使用的防盗螺丝则是可装不可卸式的。
+									</span>
+								</div>								
+							</div>									
+								<div class="xs4 cx-fex-l">
+									<div class="layout cx-fex-c fex-items-c">
+										<img class="img-responsive" src="img/cp-12.jpg" alt="">
+									</div>
+								</div>
+							</div>								
+						</div>					
+				</div>				
+			</div>
+			
+			<!-- 马路上的标识 -->
+			<div class="cont pad-b50" v-show="come02">
+				<div class="layout cx-fex-l pad-a20">
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda" v-if="loginType === 'username'" @click="changeloginType">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-13.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-01.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">马路上的标识</h3>
+					</div>	
+					<!-- 点击图片详情 -->
+					<div class="layout cx-fex-c pad-t50" v-if="loginType === 'name'" @click="changelogin">
+						<div class="xs4 mb-10 t-24 bor-gray t-c pad-a5">马路上的标识</div>
+						<div class="layout cx-fex-l">
+							<div class="xs8 cx-fex-l pad-a10">
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">应用环境：</h3>
+								<div class="t-gray t-18">交通公路上行驶 </div>
+							</div>
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">作用：</h3>
+								<span class="t-gray t-18">1.提供道路信息，起到道路语言作用。 </span>
+								<span class="t-gray t-18">2.指挥控制交通，保障交通安全。 </span>
+								<span class="t-gray t-18">3.指路导向，提高行车效率。 </span>
+								<span class="t-gray t-18">4.为交通管理部门提供执法依据。 </span>
+							</div>									
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">基本功能：</h3>
+								<span class="t-gray t-18">
+									     道路交通标志牌制作比内部标志标识制作更不容易把握。对城市细节化中重要程度也要多一些。道路上的标志系统不仅是环境中的因素，环境里的参加者是体现整个环境的主题式物体。在营造环境方面，标志牌和雕塑有相同的能力，道路上的标识牌，在介入空间后，就会与原有的环境并存，还会增加原来环境的视觉感觉。所有的城市非常需要有套规范的标识系统，不止有利于旅游者，对当地人也会有帮助的。可以很好的提高城市效率。标识牌不单是一种标识标牌，还能显现出一个国家的经济水平，与人们的生活密不可分。
+								</span>
+							</div>																
+						</div>									
+							<div class="xs4 cx-fex-l">
+								<div class="layout cx-fex-c fex-items-c">
+									<img class="img-responsive" src="img/cp-13.jpg" alt="">
+								</div>
+							</div>
+						</div>								
+					</div>						
+				</div>
+											
+			</div>
+			
+			<!-- 三角架 -->
+			<div class="cont pad-b50" v-show="come03">
+				<div class="layout cx-fex-l pad-a20">
+					<div class="xs3 pad-a10 cx-fex-c cx-click fangda" v-if="loginType === 'username'" @click="changeloginType">
+						<div class="layout bg-imgs" style="background-image: url(img/cp-14.jpg);">
+							<!-- <img class="img-responsive" src="img/cp-01.jpg" alt=""> -->
+						</div>
+						<h3 class="t-18 cx-fex-c pad-t10">三角架</h3>
+					</div>	
+					<!-- 点击图片详情 -->
+					<div class="layout cx-fex-c pad-t50" v-if="loginType === 'name'" @click="changelogin">
+						<div class="xs4 mb-10 t-24 bor-gray t-c pad-a5">三角架</div>
+						<div class="layout cx-fex-l">
+							<div class="xs8 cx-fex-l pad-a10">
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">应用环境：</h3>
+								<div class="t-gray t-18">通常安装于如物流通道两侧，生产设备周边，建筑墙角，门的两侧及货台边沿等等。</div>
+							</div>
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">作用：</h3>
+								<span class="t-gray t-18">1.保障人身安全。 </span>
+								<span class="t-gray t-18">2.避免后来车辆发生事故。 </span>
+								<span class="t-gray t-18">3.有效减免搬运设备往来穿梭时带来意外撞击造成的设备、设施的损坏。 </span>
+								
+							</div>									
+							<div class="layout cx-fex-l pad-t20">
+								<h3 class="t-18">基本功能：</h3>
+								<span class="t-gray t-18">
+									提醒开车的人注意这里有东西
+								</span>
+							</div>																
+						</div>									
+							<div class="xs4 cx-fex-l">
+								<div class="layout cx-fex-c fex-items-c">
+									<img class="img-responsive" src="img/cp-14.jpg" alt="">
+								</div>
+							</div>
+						</div>								
+					</div>						
+				</div>
+											
+			</div>
+			
+			<div class="footerpage"></div>		
+		</div>	
+	</body>
+	<script src="js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script></script>
+	<script>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				lists:[{title:'全部产品',list:''},
+				{title:'行驶证制作',list:''},
+				{title:'驾驶证制作',list:''},
+				{title:'汽车牌照防盗螺丝',list:''},
+				{title:'马路上的标识',list:''},
+				{title:'三角架',list:''},
+				
+				],
+				about_us:true,
+				line_note:false,
+				come:false,
+				come01:false,
+				come02:false,
+				come03:false,
+				loginType:'username'
+				},
+				methods:{
+					show_t(i){
+							console.log(i)						
+						if(i==0){
+							this.about_us = true;
+							this.line_note = false;
+							this.come = false;
+							this.come01 = false;
+							this.come02 = false;
+							this.come03 = false;
+						}
+						if(i==1){
+							this.about_us = false;
+							this.line_note = true;
+							this.come = false;
+							this.come01 = false;
+							this.come02 = false;
+							this.come03 = false;
+						}
+						if(i==2){
+							this.about_us = false;
+							this.line_note = false;
+							this.come = true;
+							this.come01 = false;
+							this.come02 = false;
+							this.come03 = false;
+						}
+						if(i==3){
+							this.about_us = false;
+							this.line_note = false;
+							this.come = false;
+							this.come01 = true;
+							this.come02 = false;
+							this.come03 = false;
+						}
+						if(i==4){
+							this.about_us = false;
+							this.line_note = false;
+							this.come = false;
+							this.come01 = false;
+							this.come02 = true;
+							this.come03 = false;
+						}
+						if(i==5){
+							this.about_us = false;
+							this.line_note = false;						
+							this.come = false;
+							this.come01 = false;
+							this.come02 = false;
+							this.come03 = true;
+						}
+						// $('.user_click').css({"background":"white"})
+						// $('.user_click').eq(i).css({"background": "blue"})
+					},
+					changeloginType(){
+					  let self = this;
+					  if(self.loginType=='name'){
+					   self.loginType = ''
+					  }else{
+					   self.loginType = 'name'
+					  }
+					  },
+					
+					changelogin(){
+					let self = this;
+					if(self.loginType=='username'){
+					 self.loginType = ''
+					}else{
+					 self.loginType = 'username'
+					}
+					}
+				},
+						
+				})
+	</script>
+	<script type="text/javascript">			
+		    $(function(){
+		        /*公共部分
+		         * 导航栏
+		         * footer CopyRight
+		         */
+		        $(".headerpage").load("header.html");
+		        $(".footerpage").load("footer.html");
+		    });			
+	</script>
+</html>
